@@ -4,7 +4,7 @@ jobs: # basic units of work in a run
   build: 
     docker: # use the Docker executor
       # CircleCI node images available at: https://hub.docker.com/r/circleci/node/
-      - image: cimg/ruby:2.7.1-node
+      - image: circleci/shellcheck@x.y.z
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -12,6 +12,8 @@ jobs: # basic units of work in a run
       - checkout # check out source code to working directory
       # Run a step to setup an environment variable
       # Redirect MY_ENV_VAR into $BASH_ENV
+      - run: apt-get install -y sudo # https://discuss.circleci.com/t/sudo-command-not-found/14208/4
+      - run: ls -al /bin/sh && sudo rm /bin/sh && sudo ln -s /bin/bash /bin/sh && ls -al /bin/sh
       - run: 
           name: "Setup custom environment variables"
           command: sudo chmod +x ./qualiti-script.sh && sudo ./qualiti-script.sh
