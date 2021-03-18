@@ -14,4 +14,4 @@ jobs: # basic units of work in a run
       # Redirect MY_ENV_VAR into $BASH_ENV
       - run: 
           name: "Setup custom environment variables"
-          command: sudo chmod +x ./qualiti-script.sh && sudo ./qualiti-script.sh
+          command: chmod +x ./qualiti-script.sh &&  ./qualiti-script.sh
