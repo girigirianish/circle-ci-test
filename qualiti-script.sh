@@ -10,8 +10,8 @@ API_URL='https://7iggpnqgq9.execute-api.us-east-2.amazonaws.com/udbodh/api'
 INTEGRATION_JWT_TOKEN='<your-jwt-token>'
 INTEGRATIONS_API_URL='<ngrok-url>'
  
-apt-get update -y
-apt-get install -y jq
+sudo apt-get update -y
+sudo apt-get install -y jq
  
 #Trigger test run
 TEST_RUN_ID="$( \
