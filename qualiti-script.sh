@@ -9,8 +9,8 @@ INTEGRATION_JWT_TOKEN='<your-jwt-token>'
 INTEGRATIONS_API_URL='<ngrok-url>'
  
 
-sudo apt-get update
-sudo apt-get install -y jq
+apt-get update
+apt-get install -y jq
  
 #Trigger test run
 TEST_RUN_ID="$( \
