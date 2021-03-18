@@ -4,7 +4,7 @@ jobs: # basic units of work in a run
   build: 
     docker: # use the Docker executor
       # CircleCI node images available at: https://hub.docker.com/r/circleci/node/
-      - image: koalaman/shellcheck-alpine:stable
+      - image: circleci/shellcheck@2.2.2
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -12,7 +12,6 @@ jobs: # basic units of work in a run
       - checkout # check out source code to working directory
       # Run a step to setup an environment variable
       # Redirect MY_ENV_VAR into $BASH_ENV
-      - run: set -ex && apk --no-cache add sudo
       - run: 
           name: "Setup custom environment variables"
           command: sudo chmod +x ./qualiti-script.sh && sudo ./qualiti-script.sh
