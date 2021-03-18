@@ -1,5 +1,3 @@
-#!/bin/bash
- 
 set -ex
  
 PROJECT_ID='332'
