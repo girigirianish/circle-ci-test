@@ -8,8 +8,8 @@ API_URL='https://7iggpnqgq9.execute-api.us-east-2.amazonaws.com/udbodh/api'
 INTEGRATION_JWT_TOKEN='<your-jwt-token>'
 INTEGRATIONS_API_URL='<ngrok-url>'
  
-sudo sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt/sources.list
-sudo apt-get -o Acquire::Check-Valid-Until=false update
+
+sudo apt-get update
 sudo apt-get install -y jq
  
 #Trigger test run
