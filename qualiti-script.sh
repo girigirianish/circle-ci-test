@@ -1,15 +1,17 @@
+ 
+#!/bin/bash
+ 
 set -ex
  
 PROJECT_ID='332'
-API_KEY='<your-api-key>'
-CLIENT_ID='<your-client-id>'
+API_KEY='C3GVjpEWgX5mSTBh7XcmV4AMqcBTrGst2W65FKal'
+CLIENT_ID='f2b2cea4ac9980f694f7c254ea33e2f9'
 SCOPES=['"ViewTestResults"','"ViewAutomationHistory"']
 API_URL='https://7iggpnqgq9.execute-api.us-east-2.amazonaws.com/udbodh/api'
-INTEGRATION_JWT_TOKEN='<your-jwt-token>'
-INTEGRATIONS_API_URL='<ngrok-url>'
+INTEGRATION_JWT_TOKEN='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZWN0X2lkIjozMzIsImFwaV9rZXlfaWQiOjI0ODMsIm5hbWUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsImljb24iOiIiLCJpbnRlZ3JhdGlvbl9uYW1lIjoiR2l0bGFiIiwib3B0aW9ucyI6e30sImlhdCI6MTYxNjE1NjI2OX0.F4C59OAbjnhoA9OK_5MRoDlbL-4AVNiu3rD0S6Khj7c'
+INTEGRATIONS_API_URL='http://d65ecd1811d3.ngrok.io'
  
-
-apt-get update
+apt-get update -y
 apt-get install -y jq
  
 #Trigger test run
