@@ -16,7 +16,7 @@ apt-get install -y jq
 
 #Trigger test run
 TEST_RUN_ID="$( \
-  curl -X POST -G ${INTEGRATIONS_API_URL}/api/integrations/azure/${PROJECT_ID}/events \
+  curl -X POST -G ${INTEGRATIONS_API_URL}/api/integrations/gtilab/${PROJECT_ID}/events \
     -d 'token='$INTEGRATION_JWT_TOKEN''\
     -d 'triggerType=Deploy'\
     -d 'projectId='$PROJECT_ID''\
