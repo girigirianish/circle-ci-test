@@ -52,4 +52,4 @@ TEST_RUN_RESULT="$( \
     -H 'x-api-key: '${API_KEY}'' \
   | jq -r '.[0].status' \
 )"
-echo "Qualiti E2E Tests ${TEST_RUN_RESULT
+echo "Qualiti E2E Tests ${TEST_RUN_RESULT}"
